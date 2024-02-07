@@ -1,0 +1,891 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Salsa', cursive;
+}
+
+/* Navbar */
+.heading{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: beige;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.check {
+    display: none;
+}
+
+.logo {
+    height: 50px;
+    width: 140px;
+}
+
+.heading {
+    padding: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px;
+    margin-right: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: crimson;
+    font-weight: bold;
+}
+
+/* .nav {
+    padding-right: 50px;
+} */
+
+.heading .bar {
+    display: none;
+}
+
+@media screen and (min-width:300px) and (max-width:900px) {
+    .heading {
+        position: relative;
+    }
+
+    .heading {
+        padding: 10px;
+    }
+
+    .nav {
+        position: absolute;
+        top: 60px;
+        background-color: beige;
+        width: 100%;
+        text-align: center;
+        padding-right: 0px;
+        right:100%;
+        transition: 0.4s ease;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 50px;
+     
+    }
+    .nav a{
+        font-size: 30px;
+    }
+    .heading .bar{
+        display: inline;
+        position: absolute;
+        left: 90%;
+        font-size: 20px;
+        top: 30%;
+        cursor: pointer;
+     
+    }
+
+    .check {
+        display: inline;
+        position: absolute;
+        left: 91%;
+        opacity: 0;
+        top: 32%;
+    }
+
+    .check:checked~.nav {
+     right: 0;
+        cursor: pointer;
+
+    }
+
+}
+
+/* home */
+#home {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(245, 245, 200, 0.701), rgba(237, 237, 229, 0.841)), url(https://png.pngtree.com/thumb_back/fh260/background/20201016/pngtree-forest-cartoon-fox-monkey-leaves-animal-background-image_419245.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100%;
+
+}
+
+.homedeatils {
+    min-height: 100px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homedeatils h1 {
+    color: rgb(245, 5, 53);
+    font-size: 50px;
+    text-align: center;
+}
+
+.homedeatils h2 {
+    font-size: 18px;
+    padding-top: 20px;
+    color: rgb(19, 18, 18);
+    text-align: center;
+
+}
+
+.homedeatils button {
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    background-color: crimson;
+    margin-top: 30px;
+    
+   /* border:2px solid white; */
+
+}
+.homedeatils button:hover{
+    box-shadow: 0px 0px 20px crimson;
+}
+
+@media screen and (min-width:300px) and (max-width:1200px) {
+    .homedeatils h1 {
+        font-size: 20px;
+
+    }
+
+    #home {
+        min-height: 70vh;
+        display: flex;
+        background: linear-gradient(rgba(233, 244, 182, 0.379), rgba(237, 237, 229, 0.841)), url(https://i.pinimg.com/736x/e1/8c/b9/e18cb9b3518a944799e37783bea501fa.jpg);
+        background-repeat: no-repeat;
+        background-position: cover;
+        background-size: 100%;
+    }
+
+    .homedeatils {
+        width: 80%;
+
+    }
+}
+
+/* about us */
+#about {
+    min-height: 100vh;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus {
+    width: 50%;
+    padding: 50px;
+}
+
+.aboutus h1 {
+    color: crimson;
+    font-size: 60px;
+}
+
+.aboutus p {
+    padding-top: 20px;
+}
+
+.aboutus button {
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    background-color: crimson;
+    margin-top: 30px;
+    
+}
+.aboutus button:hover{
+ box-shadow: 0px 0px 10px crimson;
+}
+.abtimg {
+    height: 500px;
+
+}
+
+.aboutdiv {
+    width: 50%;
+}
+
+@media screen and (min-width:300px) and (max-width:800px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutus {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .aboutus h1 {
+        font-size: 30px;
+    }
+
+    .aboutdiv {
+        width: 100%;
+    }
+
+    .abtimg {
+        height: 300px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1300px) {
+
+    .aboutus {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .aboutus h1 {
+        font-size: 30px;
+    }
+
+    .aboutdiv {
+        width: 100%;
+    }
+
+    .abtimg {
+        height: 300px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/* feactures */
+#feature {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.feacturediv {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 90%;
+    min-height: 90vh;
+    background-color: white;
+    align-items: center;
+
+}
+
+.featureheading {
+    color: crimson;
+    text-align: right;
+    height: 100px;
+    font-size: 25px;
+}
+
+.featureheading1 {
+    color: crimson;
+    text-align: left;
+    height: 100px;
+    font-size: 25px;
+}
+
+.featurebox {
+    width: 70%;
+    text-align: right;
+    height: 160px;
+    margin: auto;
+}
+
+.featurebox p {
+    padding: 10px 0px;
+    font-size: 20px;
+}
+
+.featurebox2 {
+    width: 70%;
+    text-align: left;
+    height: 160px;
+    margin: auto;
+
+}
+
+.featurebox2 p {
+    padding-top: 10px;
+    font-size: 20px;
+
+}
+
+.featurebox h2 {
+    padding-top: 10px;
+}
+
+.featurebox2 h2 {
+    padding-top: 10px;
+}
+
+.stickimg1 {
+    height: 600px;
+}
+
+.emoji {
+    height: 70px;
+    width: 70px;
+}
+
+.emg {
+    display: flex;
+
+}
+
+.emg2 {
+    display: flex;
+
+}
+
+/* .leftfeacture{
+    min-height:100vh;
+} */
+@media screen and (min-width:300px) and (max-width:800px) {
+
+    .feacturediv {
+        display: grid;
+        grid-template-columns: auto;
+        width: 90%;
+
+        align-items: center;
+
+    }
+
+    .featurebox p {
+        font-size: 18px;
+    }
+
+    .featurebox2 p {
+        font-size: 18px;
+    }
+
+    .stickimg1 {
+        display: none;
+    }
+
+    #feature {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .emg {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+    }
+
+    .emg2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featureheading {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .featureheading1 {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .featurebox {
+        width: 90%;
+        text-align: center;
+    }
+
+    .featurebox2 {
+        width: 90%;
+        text-align: center;
+    }
+
+    .emoji {
+        margin-bottom: 20px;
+    }
+
+    .featurebox2 {
+        width: 100%;
+        text-align: center;
+        min-height: 170px;
+
+    }
+
+    .featurebox {
+        width: 100%;
+        text-align: center;
+        min-height: 170px;
+
+    }
+
+}
+
+
+
+@media screen and (min-width:801px) and (max-width:1300px) {
+    .featurebox2 {
+        min-height: 220px;
+    }
+
+    .featurebox {
+        min-height: 220px;
+    }
+
+    .featureheading1 {
+        font-size: 13px;
+    }
+
+    .featureheading {
+        font-size: 13px;
+
+    }
+
+    .stickimg1 {
+        height: 700px;
+        padding-top: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* services */
+
+#services {
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px;
+}
+
+#services h1 {
+    color: crimson;
+    text-align: center;
+    margin-top: 55px;
+    font-size: 40px;
+}
+
+.servicediv {
+    min-height: 80vh;
+    width: 90%;
+    background-color: azure;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 10px;
+}
+
+.servicebox {
+    height: 280px;
+    width: 400px;
+    margin: auto;
+    position: relative;
+}
+
+.servicebox img {
+    height: 280px;
+    width: 400px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.imgoverlay {
+    height: 280px;
+    width: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.512), rgba(0, 0, 0, 0.655));
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s ease-in;
+    border-radius: 10px;
+    color: white;
+}
+
+.imgoverlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media screen and (min-width:300px) and (max-width:600px) {
+    .servicediv {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .servicebox {
+        height: 300px;
+        width: 300px;
+
+    }
+
+    .servicebox img {
+        height: 300px;
+        width: 300px;
+
+    }
+
+    .imgoverlay {
+        height: 300px;
+        width: 300px;
+        text-align: center;
+    }
+
+    #services {
+        min-height: 100vh;
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1100px) {
+    .servicediv {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        width: 100%;
+
+    }
+
+    .servicebox {
+        height: 300px;
+        width: 280px;
+        text-align: center;
+
+    }
+
+    .servicebox img {
+        height: 300px;
+        width: 280px;
+
+    }
+
+    .imgoverlay {
+        height: 300px;
+        width: 280px;
+        text-align: center;
+    }
+
+    #services {
+        min-height: 100vh;
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+@media screen and (min-width:1101px) and (max-width:1300px) {
+    .servicediv {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        /* gap:20px; */
+        width: 100%;
+
+    }
+
+    .servicebox {
+        height: 250px;
+        width: 250px;
+
+    }
+
+    .servicebox img {
+        height: 250px;
+        width: 250px;
+
+    }
+
+    .imgoverlay {
+        height: 250px;
+        width: 250px;
+        text-align: center;
+    }
+}
+
+/* Teacher */
+#teacher {
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+#teacher h1 {
+    text-align: center;
+    padding-top: 90px;
+    color: crimson;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.teacherdiv {
+    min-height: 80vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.teachbox {
+    height: 520px;
+    background-color: beige;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px dotted crimson;
+}
+
+.teachbox p {
+    line-height: 30px;
+    padding-top: 20px;
+}
+
+.teachbox h3 {
+    padding-top: 10px;
+}
+
+.teachbox img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.teachbox h2 {
+    color: crimson;
+}
+
+.l {
+    height: 45px;
+    width: 45px;
+    border: 2px solid rgb(70, 68, 68);
+    font-size: 23px;
+    border-radius: 50%;
+    padding: 12px 12px 14px 11px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width:300px) and (max-width:700px) {
+    .teacherdiv {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .teachbox {
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width:701px) and (max-width:1200px) {
+    .teacherdiv {
+
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+
+    .teachbox {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width:1201px) and (max-width:1300px) {
+    .teacherdiv {
+
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+    }
+
+    .teachbox {
+        width: 280px;
+    }
+}
+
+/* contact */
+#contact {
+    min-height: 90vh;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.contactdiv {
+    height: 70vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.detail {
+    height: 55vh;
+    margin: auto;
+    width: 40%;
+}
+
+.detail button {
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    background-color: crimson;
+    font-weight: bold;
+}
+.detail button:hover{
+    box-shadow: 0px 0px 10px crimson;
+   }
+.detail i {
+    margin: 10px;
+    border: none;
+    color: crimson;
+}
+
+.follow {
+    padding-top: 30px;
+}
+
+.follow .f {
+    border: 2px solid black;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 9px 10px;
+    font-size: 24px;
+    color: black;
+    margin-top: 20px;
+}
+
+.inputdiv button {
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    background-color: crimson;
+    margin-top: 30px;
+    font-weight: bold;
+
+}
+.error{
+    color:red;
+    font-size: 13px;
+    padding-left: 20px;
+}
+.inputdiv button:hover{
+    box-shadow: 0px 0px 10px crimson;
+   }
+
+.inputdiv {
+    width: 50%;
+    min-height: 500px;
+}
+
+.inputdiv h1 {
+    font-size: 50px;
+    color: crimson;
+}
+
+.namee {
+    width: 400px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    padding-left: 10px;
+
+}
+
+.msgg {
+    height: 160px;
+    width: 400px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid gray;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.contactpic {
+    height: 600px;
+}
+
+@media screen and (min-width:300px) and (max-width:900px) {
+    .contactdiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputdiv {
+        width: 100%;
+
+    }
+
+    .detail {
+        width: 100%;
+    }
+
+    .contactpic {
+        height: 300px;
+    }
+
+    .namee {
+        max-width: 90%;
+        height: 35px;
+        border-radius: 10px;
+
+    }
+
+    .msgg {
+        height: 160px;
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1200px) {
+    .containtimg {
+        display: none;
+    }
+
+}
